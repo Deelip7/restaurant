@@ -1,6 +1,5 @@
 @import url(font-awesome.min.css);
-@import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900");
-
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 html,
 body,
 div,
@@ -230,7 +229,7 @@ body,
 input,
 select,
 textarea {
-  font-family: "Merriweather", Georgia, serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: 1rem;
   line-height: 2.375;
@@ -2640,7 +2639,7 @@ input[type="radio"]:focus + label:before {
 /* Icon */
 
 .icon {
-  text-decoration: none;
+  text-decoration: none !important;
   border-bottom: none;
   position: relative;
 }
@@ -2708,7 +2707,7 @@ input[type="radio"]:focus + label:before {
 
 .image.main {
   display: block;
-  margin: 4rem 0;
+  margin: 1rem 0;
   width: 100%;
 }
 
@@ -2994,10 +2993,6 @@ header > .date {
   position: relative;
 }
 
-header > p {
-  font-style: italic;
-}
-
 header > h1 + p {
   font-size: 1.1rem;
   margin-top: -0.5rem;
@@ -3170,127 +3165,6 @@ table.alt tbody tr td {
   border-color: #eeeeee;
 }
 
-/* Pagination */
-
-.pagination {
-  display: -moz-inline-flex;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flex;
-  display: inline-flex;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  cursor: default;
-  list-style: none;
-  margin: 0 0 2rem 2px;
-  padding: 0;
-}
-
-.pagination a,
-.pagination span {
-  -moz-transition: background-color 0.2s ease-in-out,
-    border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
-    color 0.2s ease-in-out;
-  -webkit-transition: background-color 0.2s ease-in-out,
-    border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
-    color 0.2s ease-in-out;
-  -ms-transition: background-color 0.2s ease-in-out,
-    border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
-    color 0.2s ease-in-out;
-  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out,
-    box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
-  border: solid 2px;
-  display: inline-block;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-size: 0.8rem;
-  font-weight: 900;
-  height: 3rem;
-  letter-spacing: 0.075em;
-  line-height: calc(3rem - 4px);
-  margin-left: -2px;
-  min-width: 3rem;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.pagination .next,
-.pagination .previous {
-  text-decoration: none;
-  padding: 0 1.75rem;
-}
-
-.pagination .next:before,
-.pagination .previous:before {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  text-transform: none !important;
-}
-
-.pagination .next:before,
-.pagination .previous:before {
-  display: inline-block;
-  color: inherit !important;
-}
-
-.pagination .previous:before {
-  content: "\f104";
-  margin-right: 0.9375em;
-}
-
-.pagination .next:before {
-  content: "\f105";
-  float: right;
-  margin-left: 0.9375em;
-}
-
-@media screen and (max-width: 980px) {
-  .pagination a,
-  .pagination span {
-    font-size: 0.9rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .pagination .page,
-  .pagination .extra {
-    display: none;
-  }
-}
-
-.pagination a,
-.pagination span {
-  border-color: #eeeeee;
-}
-
-.pagination a {
-  color: #212931 !important;
-}
-
-.pagination a:hover {
-  color: #18bfef !important;
-  border-color: #18bfef;
-  z-index: 1;
-}
-
-.pagination a:hover + a,
-.pagination a:hover + span {
-  border-left-color: #18bfef;
-}
-
-.pagination a.active {
-  background-color: #eeeeee;
-}
-
-.pagination span {
-  color: #eeeeee;
-}
-
 /* Wrapper */
 
 #wrapper {
@@ -3312,7 +3186,7 @@ table.alt tbody tr td {
   background-color: #212931;
   background-image: url("../../images/overlay.png"),
     linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-    url("http://getwallpapers.com/wallpaper/full/c/3/1/751877-free-hd-texture-backgrounds-1920x1080.jpg");
+    url("../../images/bg.jpg");
   background-size: auto, auto, 100% auto;
   background-position: center, center, top center;
   background-repeat: repeat, no-repeat, no-repeat;
@@ -4033,7 +3907,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 /* Footer */
 
 #footer {
-  color: #717981;
+  color: #000000;
   display: -moz-flex;
   display: -webkit-flex;
   display: -ms-flex;
@@ -4388,7 +4262,8 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 #footer form label,
 #footer h3,
 #footer p {
-  font-size: 0.8rem;
+  font-size: 1rem;
+  text-align: center;
 }
 
 @media screen and (max-width: 980px) {
@@ -4764,5 +4639,85 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
     transform: translateX(0);
     box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.2);
     visibility: visible;
+  }
+}
+
+/*----------------------------*/
+/* Slideshow container */
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Fading animation */
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
   }
 }
